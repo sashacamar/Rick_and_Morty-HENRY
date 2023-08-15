@@ -3,10 +3,15 @@ const PORT = 3001;
 
 const { conn } = require('./DB_connection')
 
-server.listen(PORT, async()=>{
-    await conn.sync();
-})
-
+// server.listen(PORT, async()=>{
+//     await conn.sync();
+// })
+conn.sync({ alter: true }).then(() => {
+    server.listen(3001, () => {
+      console.log(`Server raised in port ${PORT}`);
+    });
+});
+  
 
 
 //TODO ESTO AHORA PASO A NUESTRO ARCHIVO APP.JS
