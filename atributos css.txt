@@ -1,0 +1,9 @@
+amarillo : rgb(234, 255, 0)
+verde: (89, 255, 0)
+rojo: (255, 0, 0, 0)
+
+
+
+tipografia
+font-family: 'Sarabun', sans-serif;
+
